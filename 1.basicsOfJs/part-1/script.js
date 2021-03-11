@@ -293,6 +293,8 @@ switch(true){
 // falsy values: undefined, null, o, '', NaN
 // truthy values: NOT falsy values
 
+
+/*
 var height = 0;
 
 height = 23;
@@ -307,6 +309,230 @@ if(height === 0 || height){
 if(height == '23'){
     console.log('The == operator does type coercion!');
 }
+
+*/
+
+/************
+*Coding Chakkenge 2
+*/
+
+/*
+
+var john_team = 89 + 120 + 103;
+var john_avg = john_team / 3;
+
+var mike_team = 116 + 94 + 123;
+var mike_avg = mike_team / 3;
+
+console.log('Jhon\'s team avagare : ' + john_avg );
+console.log('Mike\'s team avarage : ' + mike_avg );
+
+if ( john_avg > mike_avg){
+    console.log('John\'s team has won the match and it\'s avg score is : ' + john_avg);
+} else if ( john_avg < mike_avg){
+    console.log('Mike\'s team has won the match and it\'s avg score is : ' + mike_avg);
+} else{
+    console.log('Match draw');
+}
+
+var mary_team = 97 + 134 + 105;
+var mary_avg = mary_team / 3;
+
+
+if ( john_avg > mike_avg && john_avg > mary_avg){
+    console.log('John\'s team has won the match and it\'s avg score is : ' + john_avg);
+} else if ( john_avg < mike_avg && mary_avg < mike_avg){
+    console.log('Mike\'s team has won the match and it\'s avg score is : ' + mike_avg);
+} else if( john_avg === mike_avg && john_avg === mary_avg){
+    console.log('Match draw');
+} else{
+    console.log('Mary\'s team has won the match and it\'s avg score is : ' + mary_avg);
+}
+*/
+
+
+/***********
+* Function
+*/
+
+
+/*
+function calculateAge(birthyear){
+    return 2021 - birthyear;
+}
+
+var agejohn = calculateAge(1999);
+var agemike = calculateAge(2000);
+var agenull = calculateAge(1998);
+
+console.log(agejohn + agemike + agenull);
+
+function yearsUntilRetirement(year, firstname){
+    var age = calculateAge(year);
+    var retirement = 65 - age;
+    
+    if( retirement > 0 ){
+        console.log(firstname + ' retires in '+ retirement + ' years.');
+    } else{
+        console.log(firstname + "is already retired.");
+    }
+}
+
+yearsUntilRetirement(1965, 'Kohn');
+yearsUntilRetirement(1987, 'Mike');
+yearsUntilRetirement(1948, 'Jane');
+*/
+
+
+/********************
+* Function Statement and Expression
+*/
+
+// Function Declaration
+
+//function whattodo(job, firstname){
+//    
+//}
+
+// Function Expression
+
+
+/*
+var whattodo = function(job, firstname){
+    switch (job){
+        case 'teacher':
+            return firstname + ' teaches tech code.';
+            break;
+        case 'driver':
+            return firstname + ' drives car.';
+            break;
+    }
+}
+
+console.log(whattodo('teacher', 'jafor'));
+*/
+
+/* ******************
+* Arrays
+*/
+
+
+/*
+var names = ['Jhon', 'Mark', 'Jane'];
+var years = new Array(1990, 1991, 1992);
+
+console.log(names.length);
+
+// add element at last
+names.push('Riki');
+console.log(names);
+
+// add element at first
+names.unshift('mohammad');
+console.log(names);
+
+// supports different data type
+names.push(190);
+console.log(names);
+
+// pop from last
+names.pop();
+console.log(names);
+
+// pop from beginiing
+names.shift();
+console.log(names);
+
+// find the index
+console.log(names.indexOf('Jhon'));
+
+var isDesigner = names.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John is a designer';
+console.log(isDesigner);
+*/
+
+
+/* ***************
+* Coding challenge 3
+*/
+
+/*
+var bills = [124, 48, 268];
+var tips = []
+
+function billsTips(bill){
+    if(bill < 50){
+        tips.push(bill * (20/100));
+    } else if( bill >= 50 && bill <= 200){
+        tips.push( bill * (15/100));
+    }else{
+        tips.push( bill * (10/100));
+    }
+}
+
+var finalBill = []
+
+for(var i=0; i<bills.length; i++){
+    billsTips(bills[i]);
+    finalBill.push(bills[i]+tips[i]);
+}
+
+console.log(tips);
+console.log(finalBill);
+*/
+
+
+
+/* ************
+* Objects and Properties
+*/
+
+/*
+var john = {
+    firstName : 'John',
+    lastName : 'Cina',
+    birthYear : 1999,
+    family : ['Jane', 'mark', 'bob', 'Emily'],
+    job: 'teacher',
+    isMarried: false
+};
+
+console.log(john);
+console.log(john.firstName);
+console.log(john['lastName']);
+
+john.job = 'designer';
+john['isMarried'] = true;
+
+// New Object syntex
+var jane = new Object();
+jane.name = 'Mula';
+jane.year = 1990;
+console.log(jane);
+*/
+
+
+/*  ***********************
+* Objects and methods
+*/
+
+
+var john = {
+    firstName : 'John',
+    lastName : 'Cina',
+    birthYear : 1999,
+    family : ['Jane', 'mark', 'bob', 'Emily'],
+    job: 'teacher',
+    isMarried: false,
+    calAge: function(birthYear) {
+        this.age = 2021 - this.birthYear;
+    }
+};
+
+john.calAge();
+console.log(john);
+
+
+
 
 
 
