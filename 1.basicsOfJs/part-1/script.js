@@ -476,8 +476,8 @@ for(var i=0; i<bills.length; i++){
     finalBill.push(bills[i]+tips[i]);
 }
 
-console.log(tips);
-console.log(finalBill);
+//console.log(tips);
+//console.log(finalBill);
 */
 
 
@@ -516,6 +516,7 @@ console.log(jane);
 */
 
 
+/*
 var john = {
     firstName : 'John',
     lastName : 'Cina',
@@ -530,13 +531,135 @@ var john = {
 
 john.calAge();
 console.log(john);
+*/
 
 
 
+// Coding Challenge 4
+
+// BMI problem with method and object
+
+/*
+var john = {
+    fullName : 'John',
+    mass : 92,
+    height : 1.95,
+    bmi: function(mass, height){
+        this.jbmi = this.mass / (this.height*this.height);
+        return this.jbmi;
+    }
+};
+
+var mark = {
+    fullName : 'Mark',
+    mass : 78,
+    height : 1.65,
+    bmi: function(mass, height){
+        return this.mass / (this.height*this.height);
+    }
+};
+
+console.log(john.bmi());
+console.log(mark.bmi());
+*/
+
+///Loops and iteration
+
+/*
+
+for(var i=0; i<10; i++){
+    console.log(i);
+}
+
+var arr = [100, 'smith', '7383'];
+
+for(var i=0; i<arr.length; i++){
+    
+    if(arr[i] == 100)
+        arr[i] += 1;
+    
+    console.log(arr[i]);
+}
+*/
+
+/*************
+Coding Challenge 5
+*/
 
 
+var johnfamily = {
+    fullName : 'John Smith',
+    bills : [124, 48, 268, 180, 42],
+    calcTips: function() {
+        this.tips = [];
+        this.finalValues = [];
+        
+        for(var i = 0; i < this.bills.length; i++){
+            var parcentage;
+            if(this.bills[i] < 50){
+                parcentage = 20;
+            } else if( this.bills[i] >= 50 && this.bills[i] < 200){
+                parcentage = 15;
+            }else{
+                parcentage = 10;
+            }
+            this.tips[i] = (this.bills[i] * parcentage) / 100;
+            this.finalValues[i] = this.tips[i] + this.bills[i];
+        }
+    }
+    
+}
 
 
+var markfamily = {
+    fullName : 'mark Smith',
+    bills : [124, 48, 268, 180, 42],
+    calcTips: function() {
+        this.tips = [];
+        this.finalValues = [];
+        
+        for(var i = 0; i < this.bills.length; i++){
+            var parcentage;
+            if(this.bills[i] < 100){
+                parcentage = 20;
+            } else if( this.bills[i] >= 100 && this.bills[i] < 300){
+                parcentage = 15;
+            }else{
+                parcentage = 10;
+            }
+            this.tips[i] = (this.bills[i] * parcentage) / 100;
+            this.finalValues[i] = this.tips[i] + this.bills[i];
+        }
+    }
+    
+}
+
+johnfamily.calcTips();
+markfamily.calcTips();
+console.log(johnfamily, markfamily);
+
+function calAvg(tips){
+    var sum = 0;
+    for(var i = 0; i < tips.length; i++){
+        sum += tips[i];
+    }
+    
+    return sum / tips.length;
+}
+
+
+// Tips calculations
+
+johnfamily.average = calAvg(johnfamily.tips);
+markfamily.average = calAvg(markfamily.tips);
+
+if ( johnfamily.average > markfamily.average ){
+    console.log(johnfamily.fullName + '\'s family pay higher tips, with an average of $' + johnfamily.average);
+} else if( johnfamily.average < markfamily.average ){
+    console.log(markfamily.fullName + '\'s family pay higher tips, with an average of $' + markfamily.average);
+} else{
+    console.log('They pay equal');
+}
 
 
 
