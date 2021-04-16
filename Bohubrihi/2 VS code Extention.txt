@@ -1,0 +1,25 @@
+For HTML :
+
+HTML Snippets
+Auto Close Tag
+Auto Rename Tag
+
+If html emmit don't work then go to
+
+settings > extensions > settings.json and add these 2 line;
+
+"emmet.triggerExpansionOnTab": true,
+"files.associations": {"*html" : "html"}
+
+For JavaScript :
+
+JavaScript (ES6) code snippets
+
+Live Server:
+
+Live Server
+
+Meterial Design:
+
+Material Icon Theme
+

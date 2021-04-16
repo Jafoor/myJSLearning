@@ -1,0 +1,40 @@
+What is Javascript?
+
+JAvascript is a Programming Language of Browsers
+
+It gives life t web pages
+
+Client side Scripting Language
+
+Used alone with HTML
+
+
+
+SERVER Side Development:
+
+JavaScript is can be executed on Server also (Noje.js)
+
+Even android/ios app can be developed using JavaScript (React Native)
+
+
+
+JavaScript Version:
+
+Maintained By Community
+
+ECMAScript 1 (1997)
+
+ECMAScript 2015 ECMASCRIPT 6 or ES6
+
+
+
+JavaScript Engines
+
+Google Chrome - V8
+
+Mozilla - ApiderMonkey
+
+Safari - JavaScriptCore
+
+Internet Explorer - Chakra
+
