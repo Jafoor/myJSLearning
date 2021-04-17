@@ -208,13 +208,116 @@ console.log(countries);
  * 
  */
 
- var numbers;
- numbers = [];
- numbers.push(1);
- numbers.push(78);
- numbers.push('one');
-console.log(numbers);
+/**
+ //Collection of items
+countries = ["Bangladesh", "USA", "UK"]
 
-x = "Bangladesh";
-var y = x.split("");
-console.log(y);
+countries[0]
+countries[1]
+
+country = countries[0]
+country
+
+//Mutable
+countries[0] = "Poland"
+countries
+countries.length;
+countries[countries.length] = "Norway"
+
+//Push and Pop
+countries.push("China"); // return length
+countries.pop() // returns length
+countries.push("Japan", "Srilanka");
+countries.shift() //returns the shifted
+countries.unshift("Germany") // returns length
+
+
+//Empty array
+var numbers;
+numbers = []
+numbers.push(1)
+numbers.push(78)
+numbers.push("One")
+
+x = "Bangladesh"
+var y = x.split("")
+x = "Bangladesh is a country"
+y = x.split("")
+y = x.split("n")
+z = x.split(" ")
+x = "Bangladesh, China, Finland"
+y = x.split(",")
+
+z.toString()
+z.join("/")
+
+x.concat(z, y);
+
+countries.sort()
+countries.reverse()
+
+
+//Links
+//https://www.w3schools.com/jsref/jsref_obj_array.asp 
+ 
+ */
+
+ // Object
+
+ /**
+  * student = {name:"Rahim", age:25, hometown:"Dhaka"}
+student["name"]
+student.name
+
+
+student = {}
+student["name"] = "Rahim"
+
+
+delete simanta.name
+  */
+
+  // More array and objects
+/**
+   var arr = [1, 2, 3, 4];
+  var arr1 = ['a', 'b', [1, 2], 'c'];
+  console.log(arr1[2][1]);  
+  arr = [1, 2 ,[ 'f1', ['w1', 'w2'], 'f2'], 4];
+  console.log(arr[2][1][1]);
+
+  // object in array
+  arr = [1,2, ['a', 'b'], {prop1: "Item 1", prop2: "Item 2"}];
+  console.log(arr[3].prop1);
+
+  arr  = {
+    prop1 : "Prop 1",
+    prop2 : "Prop 2",
+    prop3 : ["Item 1", "Item 2"]
+  };
+
+  console.log(arr.prop3[0]);
+ */
+
+ // Primitive Type
+ // Number, String, Boolean
+// deals with value
+
+/**
+  let a = 7;
+ let b = a;
+ a = 10;
+ console.log(b);
+
+ // Reference Type
+ // array, object
+ let numbers = [1,2,3,4];
+ let newnumbers = numbers;
+ console.log(newnumbers);
+
+ numbers[0] = 11;
+ console.log(newnumbers);
+ */
+
+
+let a = {};
+console.log(a.name);
